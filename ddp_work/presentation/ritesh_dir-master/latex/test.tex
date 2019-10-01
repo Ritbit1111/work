@@ -1,0 +1,54 @@
+\documentclass{beamer}
+\usetheme{Boadilla}
+
+\title[DDP Phase 1]{\textbf{\large Data Driven I-V Freature Extraction for PV modules}}
+\subtitle{Paper presentation}
+\author [Ritesh Kumar]{\textbf{Ritesh Kumar} \\ Guide : Prof. Narendra Shiradkar}
+\institute[IITB]{Electrical Engineering \\ IIT Bombay}
+\titlegraphic{\includegraphics[width=2cm]{logo}}
+
+
+\newcommand\Fontvi{\fontsize{7.3}{7}\selectfont}
+%\setbeamerfont{frametitle}{size=\tiny}
+\begin{document}
+
+	\begin{frame}[t]
+		\titlepage
+	\end{frame}
+
+	\begin{frame}
+	\frametitle{Motivation}
+%	\Fontvi
+		\begin{itemize}
+			\item Performance parameter extracted from I-V data set : Pmp, Voc, Isc, Rs, Rsh, FF are essential for diagnosing degradation of PV modules
+			\item Data driven technique can be applied to a \textbf{large amount} of data in a \textbf{short time} in contrast with traditional fitting of diode equation
+			\item Applied to 2.2 million real I-V datasets, took 3 hrs to complete
+			\item No requirement of device parameter to be input from the researcher
+			\item Applicable on non standard I-V datasets having \textbf{multiple steps}
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}[t]
+		\frametitle{Method}
+		\begin{enumerate}
+			\item \textbf{Fit smoothing spline} on raw I-V dataset (insufficient points near Voc/unequal spacing) to get 500 equal spaced points in voltage
+			\item Regression performed on \textbf{moving window} of 5 consecutive I-V points
+			\item \textbf{Slope} of each regression line is used to identify either \textbf{step or MPPT}
+			\item \textbf{Identify the segments (steps)} : Steeper slope on the left than right
+			\item If step is found, I-V feature is extracted separately for both the parts
+		\end{enumerate}
+	\begin{columns}
+		\column{0.5\textwidth}
+			\begin{figure}
+				\includegraphics[scale=0.35]{logo}
+				\caption{lion!!}
+			\end{figure}
+		\column{0.5\textwidth}
+			\begin{figure}
+				\includegraphics[scale=0.35]{logo}
+				\caption{lion!!}
+			\end{figure}
+	\end{columns}
+	\end{frame}
+
+\end{document}

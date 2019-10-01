@@ -12,6 +12,8 @@ name_list = [name for name in name_series]
 
 df_roll = pd.DataFrame(roll_list)
 df_name = pd.DataFrame(name_list)
+
 # print (df_roll)
+print (roll_series)
 df_roll.to_csv("roll.csv", index=False, header=False)
 df_name.to_csv("name.csv", index=False, header=False)

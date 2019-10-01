@@ -1,0 +1,79 @@
+\documentclass{beamer}
+
+
+\setbeamercolor{background canvas}{bg=white}
+
+\usetheme[progressbar=frametitle]{metropolis}
+\usecolortheme{spruce}
+\setbeamertemplate{frame numbering}[fraction]
+\useoutertheme{metropolis}
+\useinnertheme{metropolis}
+\usefonttheme{metropolis}
+		
+
+
+\title [DDP Phase 1]{Data Driven techniques for I-V curve analysis}
+\subtitle{Enter something here}
+\author {Ritesh Kumar}
+\institute{IIT Bombay}
+\date{\today}
+
+\begin{document}
+	\metroset{block=fill}
+%	I beamer, we create frame to hold our information. It can contain single or multiple slides.
+%   Use xx to create new slide
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+	\begin{frame}[t]{Motivation}\vspace{0pt}
+		Hello
+		\begin{enumerate}
+			\item Movtivation is to serve millions of I-V data at once with reasonably fast pace.
+		\end{enumerate}
+	
+	\end{frame}
+	
+	\begin{frame}[t]{Definitions}\vspace{0pt}
+	\begin{block}{Definition of Slope}
+		\vspace{0.5em}
+		Slope is defined as the ratio of height to the base in a right angled triangle.
+	\end{block}
+Set $D_5 = $ 
+\only<1>{\line(1,0){50}}
+\only<2>{\textcolor{red}{Answer}}
+\, and proceed.\\[10pt]
+	\end{frame}
+	
+	\begin{frame}[t]{Column wise}\vspace{0pt}
+	$\sqrt{x^2} = $ \\[10pt]
+	\begin{enumerate}[a)]
+		\item $x$
+		\item $-x$
+		\item $|x|$
+		\item undefined
+	\end{enumerate}
+	\end{frame}
+
+\begin{frame}{Separating into columns}\vspace{0pt}
+	\begin{columns}[onlytextwidth]
+	
+	\column{0.4\textwidth}
+		\only<1->{
+		$\sqrt{x^2} = $ \\[10pt]}
+		\only<2->{
+		\begin{enumerate}[a)]
+			\item $x$
+			\item $-x$
+			\item $|x|$
+			\item undefined
+		\end{enumerate}
+		}
+	\column{0.3\textwidth}
+		\only<3->{
+		\includegraphics[scale=0.34]{logo}
+		}
+	\end{columns}
+\end{frame}
+\end{document}
