@@ -22,5 +22,13 @@ write.csv(IV5m1, 'IV5m1.csv')
 write.csv(IV5m2, 'IV5m2.csv')
 # IVExtracResult : This function carries out IV feature extraction, by calculating steps then extract features for each step.
 # IVExtractResult(dat, k = 7, crt = 0.2, num = 75, crtvalb = 0.3, plot.option = F)
-result1 <- IVExtractResult(IVds, plot.option = TRUE)
+#result1 <- IVExtractResult(IV3, plot.option = TRUE)
 #result1_step <- IVsteps(IV3$I, IV3$V, plot.option = TRUE)
+par(mfrow=c(2,2))
+x <- IV3$V
+y <- IV3$I
+plot(x,y)
+new <- smooth.spline(x,y,nknots = 41) #, all.knots = TRUE)
+xnew <- seq(from = 0, to = 37, by = 0.01)
+pred <- stats:::predict.smooth.spline(new, xnew)$y
+lines(xnew, pred, lwd = 2, col = 2)
